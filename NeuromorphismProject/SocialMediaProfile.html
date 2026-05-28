@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Card</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#e6e6e6;
+    }
+
+    .card{
+      width:320px;
+      background:#f2f2f2;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+
+      /* Neumorphism Effect */
+      box-shadow:
+        8px 8px 15px #c5c5c5,
+        -8px -8px 15px #ffffff;
+    }
+
+    .top-icons{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:20px;
+      color:#666;
+      font-size:18px;
+    }
+
+    .profile-img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+
+      box-shadow:
+        5px 5px 10px #cfcfcf,
+        -5px -5px 10px #ffffff;
+    }
+
+    h2{
+      margin-top:20px;
+      color:#333;
+    }
+
+    .role{
+      color:#777;
+      margin-top:5px;
+      font-size:16px;
+    }
+
+    .social-icons{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin:25px 0;
+    }
+
+    .social-icons i{
+      width:40px;
+      height:40px;
+      line-height:40px;
+      border-radius:50%;
+      background:#f2f2f2;
+
+      box-shadow:
+        5px 5px 10px #cfcfcf,
+        -5px -5px 10px #ffffff;
+    }
+
+    .buttons{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:25px;
+    }
+
+    .buttons button{
+      width:45%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      background:#f2f2f2;
+      font-size:16px;
+      cursor:pointer;
+
+      box-shadow:
+        5px 5px 10px #cfcfcf,
+        -5px -5px 10px #ffffff;
+    }
+
+    .stats{
+      display:flex;
+      justify-content:space-around;
+      color:#555;
+      font-size:15px;
+    }
+
+    .stats div{
+      display:flex;
+      align-items:center;
+      gap:5px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="top-icons">
+      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+
+    <img src="dhoniPic.jpg" class="profile-img">
+
+    <h2>Cricket-India</h2>
+    <p class="role">Wicketkeeper & Batsman</p>
+
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+
+    <div class="buttons">
+      <button>Message</button>
+      <button>Subscribe</button>
+    </div>
+
+    <div class="stats">
+      <div><i class="fa-regular fa-heart"></i> 20.4k</div>
+      <div><i class="fa-regular fa-comment"></i> 14.3k</div>
+      <div><i class="fa-solid fa-share"></i> 12.8k</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
