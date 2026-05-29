@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+main{
+    width: 75%;
+    margin: 80px auto;
+    height: 100px;
+
+}
+
+header{
+    width: 75%;
+    background-color: gray;
+    height: 100px;
+    /* top right bottom left*/
+    margin: 0px auto;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#top-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px ;
+    padding: 1%;
+}
+#bottom-nav{
+    background-color: rgb(155, 15, 15);
+    height: 50px;
+    border-radius: 0px 0px 10px 10px ;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+}
+.btn-box {
+    width: 70%;
+    background-color: rgb(57, 166, 183);
+    height: 80%;
+    padding: 5px;
+}
+.login-box {
+    width: 25%;
+    background-color: rgb(227, 224, 11);
+    height: 80%;
+}
+#icons-box{
+    display: flex;
+    align-items: center;
+    background-color: greenyellow;
+    justify-content:space-evenly;
+}
+.icon-items{
+    background-color: aliceblue;
+    height: 50px;
+    width: 40px;
+}
+.ad-banner{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: gray;
+}
+#banner-item-1{
+    background-color: lightblue;
+}
+#banner-item-2{
+    background-color: crimson;
+    border-radius: 5%;
+}
+#banner-item-3{
+    background-color:beige;
+}
