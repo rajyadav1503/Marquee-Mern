@@ -1,3 +1,8 @@
+/* :root{
+    --
+} */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +33,7 @@ header{
 nav {
     display: flex;
     flex-direction: column;
+    background-color: rgb(250, 250, 250);
     gap: 10px;
     
 }
@@ -39,8 +45,23 @@ nav {
 }
 .top-nav-left{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
+}
+.btn {
+  width: 150px;
+  height: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
 }
 .top-nav-right{
     background-color: azure;
@@ -100,4 +121,57 @@ nav {
 #banner-item-3{
     background-color:beige;
     width: 150px;
+}
+#home-decor-1,#home-decor-2{
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(223, 73, 27, 0.822);
+}
+#home-decor-top{
+    display: flex;
+    justify-content:space-between;
+    color: #ffffff;
+}
+.right-swipe-icons{
+    color: black;
+}
+#home-decor-bottom{
+    background-color:white;
+    margin: 5px 5px 5px 5px ;
+    display: flex;
+    width: 100% auto;
+    justify-content:space-evenly;
+    border-radius: 5px 5px 5px 5px;
+    
+   
+}
+.home-decor-cards{
+    background-color:rgb(215, 210, 210);
+    border: solid;
+    padding: 10px;
+    height: auto;
+    width: 20000px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
+    gap: 10px;
+}
+#spotlight-container{
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content:start;
+}
+.spotlight-items{
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+.spotlight-items>img{
+    width: 100%;
+    height: 100%;
 }
