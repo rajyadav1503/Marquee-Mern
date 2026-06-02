@@ -50,7 +50,7 @@ nav {
     gap: 10px;
 
 }
-.btn {
+.search-bar {
   width: 150px;
   height: 30px;
   padding: 20px;
@@ -60,7 +60,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
 }
 .top-nav-right{
@@ -89,39 +88,52 @@ nav {
     height: 80%;
 }
 #icons-box{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
     display: flex;
     align-items: center;
-    background-color: greenyellow;
-    justify-content:space-evenly;
+    justify-content: space-around;
+    gap: 5px;
+
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+
+    margin-bottom: 1rem;
 }
 .icon-items{
-    background-color: aliceblue;
-    height: 50px;
-    width: 40px;
-}
-.ad-banner{
+    width: 70px;
+    height: 70px;
+
+    padding: 5px;
+    border-radius: 1rem;
+
     display: flex;
-    gap: 10px;
-    padding: 10px;
-    background-color: gray;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+}
+#ad-banner{
+  display: flex;
+  justify-content:center;
+  gap: 10px;
+  padding: 60px;
+  overflow-x:hidden;
     
 }
-#banner-item-1{
-    background-color: lightblue;
-    height: 100px;
-    width: 300px;
-    border-radius: 5px 5px 5px 5px ;
+.ad-banners {
+  flex: 1;
+  width: 480px;
+  height: 220px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
 }
-#banner-item-2{
-    background-color: crimson;
-    border-radius: 5%;
-    width: 200px;
-}
-#banner-item-3{
-    background-color:beige;
-    width: 150px;
-}
+
 #home-decor-1,#home-decor-2{
     max-width: 100%;
     height: auto;
@@ -158,6 +170,10 @@ nav {
     margin: 10px;
     gap: 10px;
 }
+.home-decor-cards>img{
+    width: 100%;
+    height: 75%;
+}
 #spotlight-container{
     max-width: 100%;
     height: auto;
@@ -166,12 +182,17 @@ nav {
     justify-content:start;
 }
 .spotlight-items{
-    width: 200px;
+    width: 150px;
+    height: 200px;
     margin: 10px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
     overflow: hidden;
 }
 .spotlight-items>img{
     width: 100%;
     height: 100%;
+}
+footer{
+    width: 100vw;
+    background-color: black;
 }
