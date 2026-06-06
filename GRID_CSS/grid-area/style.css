@@ -1,0 +1,38 @@
+html,
+body{
+    margin: 4rem 4rem 10rem 4rem;
+    width: 80vw;
+    height: 80vh;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 70% 50px;
+    grid-template-areas: 'header header header'
+                        'nav content sidebar'
+                        'nav footer footer'  ;
+}
+
+header,
+main,
+aside,
+nav,
+footer{
+    background-color: yellow;
+    border: solid;
+}
+
+header{
+    
+    grid-area: header;
+}
+aside{
+    grid-area: sidebar;
+}
+main{
+    grid-area: content;
+}
+footer{
+    grid-area: footer;
+}
+nav{
+    grid-area: nav;
+}

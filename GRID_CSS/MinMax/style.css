@@ -1,0 +1,12 @@
+#grid-container{
+    padding: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); /*to give responsiveness , the min width of each block will be 150px and it gets wraps up when browser is minimized*/
+
+}
+.grid-items{
+    background-color: yellow;
+    gap: 1rem;
+}
