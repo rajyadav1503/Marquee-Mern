@@ -36,7 +36,8 @@ aside{
     align-items: center;
     border-bottom: 0.1px solid var(--aside-color) ;
     border-bottom-width: 0.8px;
-    padding: 5px;
+    box-sizing: border-box;
+    padding: 12px;
     /* position:fixed; */
 }
 .sidebar-top-logo{
@@ -48,6 +49,7 @@ aside{
     flex-direction: column;
     justify-content: space-between;
     margin: 20px 20px 20px 20px;
+    /* border-bottom: 0.5px solid; */
 }
 
 
@@ -113,16 +115,45 @@ aside{
     margin: 20px 10px 20px 10px;
 }
 .sidebar-section4-Levels{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: col;
+    justify-content: space-between; */
     margin: 20px 10px 20px 20px;
+    
+}
+.sidebar-section4-Levels>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.sidebar-section4-Levels>ul>li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 .sidebar-section5-labels{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 10px 5px 20px;
-    border-bottom: 0.5px solid;
+    /* display: flex;
+    justify-content: space-between; */
+    margin: 20px 10px 0px 20px;
+    /* border-bottom: 0.5px solid; */
     padding-bottom: 25px;
+}
+.sidebar-section5-labels>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.sidebar-section5-labels>ul>li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sidebar-bottom{
+    border-top: 0.5px solid;
+    padding-top: 1.5rem ;
 }
 
 .sidebar-bottom-box{
@@ -133,7 +164,7 @@ aside{
     margin: 20px 10px 20px 20px;
     border: 0.5px solid ;
     border-radius: 4px;
-    margin: 0px 30px 20px 30px;
+    margin: 0px 30px 40px 30px;
 }
 
 nav{
@@ -146,8 +177,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
+    /* padding: 10px; */
+    margin: 20px;
     gap: 30px;
 }
 
@@ -170,7 +201,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding: 10px;
+    /* padding: 10px; */
     margin: 10px;
 }
 .user-image{
@@ -183,5 +214,5 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
 }
