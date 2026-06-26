@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*section>img{
+            
+            transform: rotate(0deg);
+            animation: rotate-ball 1.5s ease-in-out infinite;
+        }
+        @keyframes rotate-ball{
+            
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+
+            0%,25%{
+                margin-top: 0px;
+                margin-right: 0px;
+                scale: 1.2;
+
+            }
+            26%,50%{
+                margin-left: 30rem;
+                scale: 1.1;
+                
+            }
+            51%,75%{
+                margin-top: 30rem;
+                margin-left: 30rem;
+                scale: 1.1;
+            }
+            76%,100%{
+                margin-top: 30rem;
+                margin-right: 30rem;
+                scale: 1.1;
+                filter: blur(5px);
+                filter: grayscale(100%);
+                animation-duration: 0.5s;
+            }
+        }*/
+        
+    section > img {
+    /* Clear the hardcoded transform so the animation takes over completely */
+    animation: rotate-ball 2s linear infinite; 
+}
+
+@keyframes rotate-ball {
+    /* Corner 1: Top Left (Start) */
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1.2);
+        filter: blur(0px) grayscale(0%);
+    }
+    21% { transform: translate(27rem, 0) rotate(75deg) scale(1.1); }
+    
+    /* ROUNDED TOP RIGHT TURN */
+    25% { transform: translate(30rem, 3rem) rotate(90deg) scale(1.1); }
+   46% { transform: translate(30rem, 27rem) rotate(165deg) scale(1.1); }
+
+    /* ROUNDED BOTTOM RIGHT TURN */
+    50% { transform: translate(27rem, 30rem) rotate(180deg) scale(1.1); filter: blur(0px) grayscale(0%); }
+    /* Corner 4: Bottom Left */
+   
+     /* Bottom Edge Travel */
+    71% { transform: translate(3rem, 30rem) rotate(255deg) scale(1.1); }
+
+    /* ROUNDED BOTTOM LEFT TURN (Filters start taking effect) */
+    75% { 
+        transform: translate(0, 27rem) rotate(270deg) scale(1.1); 
+        filter: blur(5px) grayscale(100%);
+    }
+   
+      /* Left Edge Travel */
+    96% { transform: translate(0, 3rem) rotate(345deg) scale(1.2); }
+
+    /* BACK TO TOP LEFT (Seamless Loop) */
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1.2);
+        filter: blur(0px) grayscale(0%); 
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <img src="fifa-ball.png" alt="">
+    </section>
+</body>
+</html>
