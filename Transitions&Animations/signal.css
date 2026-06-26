@@ -1,0 +1,84 @@
+.signal-box{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 110px;
+    gap: 10px;
+    background-color: grey;
+    padding: 1rem;
+    margin: 4rem;
+    border: 3px solid black;
+}
+.red-circle{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    animation-name: red-glow;
+    opacity: 0.5;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    background: radial-gradient(circle at 35% 35%, #ff6b6b, red 70%, #900 100%);
+
+}
+@keyframes red-glow{
+    0%, 33.33% {
+        opacity: 1;
+        /* border: 3px solid black; */
+    } 
+    33.34%, 100% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff3333;
+    }
+}
+.yellow-circle{
+    animation-name: yellow-glow;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffffcc, yellow 70%, #999900 100%);
+
+}
+@keyframes yellow-glow{
+    0%, 33.33% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px #ffff00, 0 0 40px #ffff33;
+    } 
+    33.34%, 66.7% {
+        opacity: 1;
+        /* border: 3px solid black; */
+    }
+    66.8% , 100% {
+        opacity: 0.5;
+    }
+}
+.green-circle{
+    animation-name: green-glow;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #6bff6b, #00ff00 70%, #006600 100%);
+}
+@keyframes green-glow{
+    0%, 33.33% {
+        opacity: 0.5; 
+        
+    } 
+    33.34%, 66.7% {
+        opacity: 0.5;
+    }
+    66.8% , 100% {
+        opacity: 2;
+        box-shadow: 0 0 20px #00ff00, 0 0 40px #33ff33;
+        /* border: 3px solid black; */
+    }
+   
+}

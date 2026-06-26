@@ -311,3 +311,37 @@ nav{
     background-color: rgba(0, 0, 0, 0.1);
     color: #1f2d3d;
 }
+
+
+
+/* ==========================================================================
+   SECTION 7: THE FOOTER COMPONENT
+   ========================================================================== */
+
+.app-footer {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6; /* Creates a clean ceiling line separating it from the grey canvas */
+    padding: 15px 20px;
+    
+    /* Using Flexbox to push the copyright to the left and version to the right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Typography styling */
+    color: #6c757d; /* Standard muted grey for low-priority text */
+    font-size: 0.9rem;
+}
+
+/* Footer hyperlink styling */
+.footer-link {
+    color: #007bff; /* AdminLTE signature blue */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Adds visual feedback when hovering over the link */
+    color: #0056b3; /* Darkens the blue slightly on hover */
+}
