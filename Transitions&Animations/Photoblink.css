@@ -28,10 +28,26 @@
     position: relative;
     /* display: flex; */
 }
-.profile-pic>.blinklogo{
+.blinklogo{
     position: relative;
     top: -295px;
     right: -170px;
+    animation-duration: 0.5s ;
+    animation-iteration-count: infinite;
+    animation-name: blinking ;
+    background: radial-gradient(circle at 35% 35%, #6bff6b, #00ff00 70%, #006600 100%);
+    border: 1px solid black;
+}
+@keyframes blinking{
+    0%,33%{
+        opacity: 0.3;
+    }
+    34%,66%{
+        opacity: 0.7;
+    }
+    67%,100%{
+        opacity: 1;
+    }
 }
 .profile-pic>img{
     position: relative;
@@ -119,7 +135,7 @@
     top: -79px;
 }
 .follow-button{
-    background-color: aqua;
+    background-color: gainsboro;
     padding: 2px;
     height: 30px;
     width: 75px;
@@ -128,11 +144,20 @@
     justify-content: center;
 }
 .message-button{
-    background-color: aqua;
+    background-color: gainsboro;
     padding: 2px;
     height: 30px;
     width: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.follow-button:hover{
+    background-color: burlywood;
+    cursor:pointer;
+}
+.message-button:hover{
+    background-color: #00ff00;
+    cursor: pointer;
 }
