@@ -33,7 +33,16 @@ function checkAdminOrNot(value){
     }
 }
 
-
-
+function canVoteOrNot(value){
+    if(value >= 18){
+        console.log('Yes , Can vote.');
+    }else{
+        console.log('No , Cannot Vote.');
+    }
+}
+let age = 25;
+canVoteOrNot(age);
 checkEven(23);
-checkAdminOrNot(1234);
+checkAdminOrNot(true);   // condition satisfied , out is 'User is Admin'
+checkAdminOrNot('true');   // condition not satisfied , output is 'Guest User'  As string data type is passed .
+checkAdminOrNot(1);   // condition not satisfied , output is 'User is Admin'    As int data type is passed .

@@ -14,5 +14,14 @@ function checkAdminOrNot(value){
     }
 }
 
+function canVoteOrNot(value){
+    if(value >= 18){
+        console.log('Yes , Can vote.');
+    }else{
+        console.log('No , Cannot Vote.');
+    }
+}
+let age = 25;
+canVoteOrNot(age);
 checkEven(23);
-checkAdminOrNot(1234);
+checkAdminOrNot(true);
