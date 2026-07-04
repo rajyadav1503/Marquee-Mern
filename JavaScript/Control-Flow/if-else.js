@@ -48,7 +48,7 @@ checkAdminOrNot(1); // condition not satisfied , output is 'User is Admin'    As
 
 
 
-function UserCanDriveOrNot(age){
+function UserCanDriveOrNot(age , license){
     if(age>=18){
         if(license === true){
             console.log('Yes , can drive.');
@@ -59,3 +59,5 @@ function UserCanDriveOrNot(age){
         console.log('No , cannot drive.');
     }
 }
+
+UserCanDriveOrNot(22 , true);
