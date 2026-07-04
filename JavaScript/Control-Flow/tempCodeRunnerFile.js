@@ -1,27 +1,13 @@
-function checkEven(value){
-    if(value % 2 == 0){
-        console.log(`${value} is even`);
+function UserCanDriveOrNot(age , license){
+    if(age>=18){
+        if(license === true){
+            console.log('Yes , can drive.');
+        }else{
+            console.log('No , cannot drive.');
+        }
     }else{
-        console.log(`${value} is odd`);
+        console.log('No , cannot drive.');
     }
 }
 
-function checkAdminOrNot(value){
-    if(value === true){
-        console.log('User is Admin');
-    }else{
-        console.log('Guest User');
-    }
-}
-
-function canVoteOrNot(value){
-    if(value >= 18){
-        console.log('Yes , Can vote.');
-    }else{
-        console.log('No , Cannot Vote.');
-    }
-}
-let age = 25;
-canVoteOrNot(age);
-checkEven(23);
-checkAdminOrNot(true);
+UserCanDriveOrNot(22 , true);
