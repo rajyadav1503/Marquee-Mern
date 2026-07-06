@@ -1,3 +1,4 @@
+//spread operators
 
 const arr1 = [1,2,3];
 const arr2 = [...arr1,4 ,5];
@@ -12,3 +13,6 @@ let [val1 ,val2, ...rest] = [...values];
 
 console.log(val1);
 console.log(val2);
+// console.log(val3);  // referenceError val3 not defined.
+
+console.log(rest);
