@@ -12,3 +12,9 @@ function execute(fn , name) {
 greet('Raj');
 
 execute(greet,'Anuj');
+
+// Variable for function
+
+let greetFunction = greet;
+greetFunction('Raj');
+console.log(greetFunction('Raj'));
