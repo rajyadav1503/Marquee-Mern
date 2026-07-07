@@ -16,3 +16,6 @@ console.log(val2);
 // console.log(val3);  // referenceError val3 not defined.
 
 console.log(rest);
+(function (val1 , val2 ) {
+    console.log(`Hello greet ${val1 + val2}`);
+})(12,12);
