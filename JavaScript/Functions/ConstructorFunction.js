@@ -65,3 +65,5 @@ console.log(Student1);
 
 Student1.updateName('Raj');
 console.log(Student1.name);
+
+
