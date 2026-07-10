@@ -1,5 +1,5 @@
-let arr = [ 1 , [2, [23]],3 ,4 ,5,6 ,7];
+const arr = [1, 2, 3 ,4,5];
 
-let newArr = arr.flatMap( x =>  x*2,3);
+const result = arr.flatMap(x => [x, x * 2]);
 
-console.log(newArr);
+console.log(result);
