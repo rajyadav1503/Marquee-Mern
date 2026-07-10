@@ -141,6 +141,22 @@ function getStudentsByCourse(courseName) {
     return students.filter(student => student.course.trim() === courseName);
 }
 
-const btechStudents = getStudentsByCourse("BCA");
+const BCAstudents = getStudentsByCourse("BCA");
 
-console.log(btechStudents);
+console.log(BCAstudents);
+
+
+
+
+
+const cart = [
+  { name: 'Laptop', quantity: 1, price: 55000 },
+  { name: 'Mouse', quantity: 2, price: 700 },
+  { name: 'Keyboard', quantity: 1, price: 1500 },
+  { name: 'Monitor', quantity: 2, price: 12000 },
+  { name: 'Headphones', quantity: 1, price: 2500 },
+  { name: 'USB Cable', quantity: 3, price: 250 },
+  { name: 'Webcam', quantity: 1, price: 3200 },
+  { name: 'External Hard Drive', quantity: 1, price: 4800 },
+  { name: 'Laptop Stand', quantity: 2, price: 900 },
+];
