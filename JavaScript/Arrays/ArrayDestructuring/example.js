@@ -24,3 +24,15 @@
 const [first , second , third ] = ['BMW'];
 console.log(first);
 console.log(second);
+
+
+
+const user = {
+    name : 'John',
+    age : 54,
+    gender : 'male'
+};
+
+const {age , name } = user;
+
+console.log(age);

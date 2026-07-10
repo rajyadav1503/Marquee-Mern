@@ -1,5 +1,10 @@
-let arr1 = ['apple' , 'banana','Mango' , 'cherry' , 'litchi'];
-const [first , second , ...third] = [...arr1];
-console.log(first);
-console.log(second);
-console.log(third);
+
+const user = {
+    name : 'John',
+    age : 54,
+    gender : 'male'
+};
+
+const {agee , name } = user;
+
+console.log(agee);
