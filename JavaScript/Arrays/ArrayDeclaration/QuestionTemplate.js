@@ -15,7 +15,6 @@ const students = [
             {subject:'Social Science',marks:99},
             {subject:'English',marks:90},
             {subject:'Hindi',marks:95}
-
         ]
     },
         { 

@@ -8,3 +8,4 @@ console.log(iterator.next(123));
 console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
+
