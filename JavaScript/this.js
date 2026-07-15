@@ -23,3 +23,21 @@ function greet() {
 }
 
 greet();
+
+
+const person = new Object({
+
+    name : 'Raj',
+    age : 21,
+
+    greet : function () {
+        console.log("Hello");
+    }
+
+});
+
+let greet = person.greet.bind({
+    
+});
+greet();
+    
