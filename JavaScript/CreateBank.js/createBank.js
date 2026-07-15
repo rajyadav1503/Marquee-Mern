@@ -3,7 +3,8 @@ function createBankAccount(AccountHolder , Mobile , Email , Balance =0 ){
     function deposit(amount){
         if(amount>0){
             balance+=amount;
-            sendMail.call(this, "deposit", amount, balance);
+            // sendMail.call(this, "deposit", amount, balance);
+            depositMail.call(this, amount, balance);
             return `Balance is ${balance}`;
         }
         return "Invaild deposit amount";
@@ -11,7 +12,8 @@ function createBankAccount(AccountHolder , Mobile , Email , Balance =0 ){
     function withdraw(amount){
         if(amount>0 && amount<=balance){
             balance-=amount;
-            sendMail.call(this, "withdraw", amount, balance); // for apply add ["withdraw", amount, balance]
+            //sendMail.call(this, "withdraw", amount, balance); // for apply add ["withdraw", amount, balance]
+            withdrawalMail.call(this , amount , balance);
             return `Balance is ${balance}`;
         }
         return "Insufficient balance";
@@ -50,10 +52,50 @@ const account  = createBankAccount(
     10000,
 )
 
+function depositMail(amount, balance) {
+
+    console.log(`
+----------------------------------------
+
+To: ${this.Email}
+
+Hello ${this.AccountHolder},
+
+₹${amount} has been successfully deposited into your account.
+
+Available Balance: ₹${balance}
+
+Thank you for banking with us.
+
+----------------------------------------
+`);
+}
+
+function withdrawalMail(amount, balance) {
+
+    console.log(`
+----------------------------------------
+
+To: ${this.Email}
+
+Hello ${this.AccountHolder},
+
+₹${amount} has been successfully withdrawn from your account.
+
+Available Balance: ₹${balance}
+
+Thank you for banking with us.
+
+----------------------------------------
+`);
+}
+
 console.log(account.checkBalance());
 console.log(account.deposit(5000));
 console.log(account.withdraw(8500));
 console.log(account.checkBalance());
+
+console.log(account.withdraw(2000));
 
 
 
