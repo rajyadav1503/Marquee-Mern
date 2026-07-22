@@ -46,8 +46,8 @@ Available Balance: ₹${balance}
 }
 
 const account  = createBankAccount(
-    "Jil",
-    "9638527411",
+    "Raj Yadav",
+    "8837012591",
     "qwerty@gmail.com",
     10000,
 )

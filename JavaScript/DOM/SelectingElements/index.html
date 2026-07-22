@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="unorderedList1">
+        <li class="items">1</li>
+        <li class="items">2</li>
+        <li class="items">3</li>
+        <li class="items">4</li>
+        <li class="items">5</li>
+    </ul>
+
+   
+    <ul id="unorderedList2">
+        <li>list items 1</li>
+        <li>list items 2</li>
+        <li>list items 3</li>
+        <li>list items 4</li>
+        <li>list items 5</li>
+    </ul>
+
+     <script>
+
+        let Ul1 = document.getElementById('unorderedList1');
+        let Ul2 = document.getElementById('unorderedList2');
+        console.log(Ul1.textContent);
+        console.log(Ul2.textContent);
+
+        let Items = document.getElementsByClassName('items');
+        console.log(Items);
+        console.log(Object.values(Items));
+        Object.values(Items).forEach((el) => {
+            console.log(el.textContent);
+        })
+
+        let allListItems = document.getElementsByTagName('li');
+        Object.values(allListItems).forEach((element) => {
+            console.log(element);
+        })
+        console.log(allListItems);
+
+        let d = this.document;
+
+        let list_items = d.getElementsByName('li');
+        console.log(list_items);
+
+        let listItems1 = document.querySelector('li');
+        Objects.values(listItems1).forEach((el) => {
+            console.log(el);
+        })
+    </script>
+
+</body>
+</html>
