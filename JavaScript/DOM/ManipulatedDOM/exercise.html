@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="fruitList"></ol>
+
+    <script>
+      
+      const fruits = ["Apple", "Banana", "Cherry" , "Litchi"];
+
+      // Parent node.
+      const ol = document.getElementById("fruitList");
+
+      
+      fruits.forEach((fruit) => {
+        
+        const li = document.createElement("li");
+        
+        li.textContent = fruit;
+
+        ol.appendChild(li);
+
+      });
+
+      const ele = document.createElement("li");
+      ele.textContent = "This is a text";
+      ol.insertAdjacentElement("afterbegin" , ele);
+      ol.insertAdjacentElement("beforeend" , ele);
+
+
+      console.log(ol.childElementCount);
+      console.log(ol.firstElementChild);
+
+      let firstChild = ol.firstElementChild;
+      let lastChild = ol.lastElementChild.previousElementSibling;
+      <!-- ol.remove(firstChild); -->
+
+      let list1 = document.createElement("li");
+      list1.innerText = 'new item';
+      ol.insertBefore(list1 , ele);
+
+      
+    </script> 
+  </body>
+</html>

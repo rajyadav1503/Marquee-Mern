@@ -24,7 +24,7 @@
     </ul>
 
      <script>
-
+        
         let Ul1 = document.getElementById('unorderedList1');
         let Ul2 = document.getElementById('unorderedList2');
         console.log(Ul1.textContent);
@@ -49,9 +49,12 @@
         console.log(list_items);
 
         let listItems1 = document.querySelector('li');
-        Objects.values(listItems1).forEach((el) => {
+        Object.values(listItems1).forEach((el) => {
             console.log(el);
         })
+            
+        let ab = document.querySelector('#unorderedList1');
+        console.log(ab);
     </script>
 
 </body>

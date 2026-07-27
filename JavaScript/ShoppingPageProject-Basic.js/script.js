@@ -195,3 +195,39 @@ payment.checkoutForPayment(order);
 // Notification
 const notification = new Notification();
 notification.notify("success");
+
+function displayProducts() {
+
+    const productList = document.getElementById("product-list");
+
+    productList.innerHTML = "";
+
+    order.products.forEach(product => {
+
+        productList.innerHTML += `
+            <div style="border:1px solid black; padding:10px; margin:10px;">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <p><strong>₹${product.price}</strong></p>
+
+                <button onclick="addProduct(${product.id})">
+                    Add to Cart
+                </button>
+            </div>
+        `;
+
+    });
+
+}
+
+function addProduct(productId) {
+
+    order.addToCart(productId);
+
+    displayProducts();
+
+    displayCart();
+
+}
+
+displayProducts();

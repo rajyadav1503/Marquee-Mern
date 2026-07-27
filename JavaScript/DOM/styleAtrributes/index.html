@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3></h3>
+    <p class="c1 c2 c3"></p>
+
+    <script>
+
+      let quotePara = document.getElementsByTagName('h3')[0];
+      let creatorPara = document.getElementsByTagName('p')[0];
+      //quotePara.style.backgroundColor = 'red';
+
+      //creatorPara.style.cssText = 'color:yellow; background: green';
+      //quotePara.style.cssText = 'background : beige;color:red ; text-size: 22px';
+      //console.log(this.getComputedStyle(creatorPara));
+      //console.log(quotePara.className);
+      console.log(quotePara.className);
+      quotePara.classList.add('red');
+      console.log(quotePara.classList);
+
+    </script>
+    
+</body>
+</html>

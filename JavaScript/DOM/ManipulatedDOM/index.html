@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="items">1</li>
+        <li class="items">2</li>
+        <li class="items">3</li>
+    
+    </ul>
+
+    <script>
+
+        //New List Items.
+        let newlist = document.createElement('li');
+        newlist.innerText = ' list 4 ';
+        
+        //Parent Element
+        let List = document.getElementById('list');
+        List.appendChild(newlist);
+        console.log(newlist.textContent);
+        
+        const fruits = ['apple','mango','banana','cherry'];
+        
+
+    </script>
+
+</body>
+</html>
