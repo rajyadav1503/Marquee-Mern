@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            margin: auto;
+            margin-top: 10%;
+            margin-bottom: 1%;
+            text-align: center;
+            color: antiquewhite;
+        }
+#bulb{
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 50%;
+    background-color: white;
+    transition-duration: 1s;
+}
+
+#switch{
+    margin: auto;
+    margin-left: 44%;
+    margin-top: 5%;
+}
+body{
+    background-color: rgb(2, 0, 0);
+}
+    </style>
+</head>
+<body>
+    <h1>Electric Bulb</h1>
+    <div id="bulb"> 
+        
+    </div>
+    <div id="switch">
+        <button >ON</button>
+        <button >OFF</button>
+    </div>
+    <script>
+        function on() {
+
+    document.getElementById("bulb").style.backgroundColor = "rgb(255, 230, 0)"
+    document.getElementById("bulb").style.border = "2px solid orange"
+   // document.getElementById("bulb").style.boxShadow = "1px 1px 8px 6px rgb(255, 145, 0)" 
+
+}
+function off() {
+
+    document.getElementById("bulb").style.backgroundColor = "rgb(255, 255, 255)"
+    document.getElementById("bulb").style.border = "2px solid rgb(249, 249, 249)"
+    // document.getElementById("bulb").style.boxShadow = " 0 0  rgb(255, 0, 0)"
+      
+
+}
+document.getElementsByTagName('button')[0].addEventListener("click" , on);
+document.getElementsByTagName('button')[1].addEventListener("click" , off);
+
+document.getElementById("bulb").addEventListener("mouseover",on)
+document.getElementById("bulb").addEventListener("mouseout",off)
+    </script>
+</body>
+</html>

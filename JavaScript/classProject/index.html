@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="username" id="list" class="input-box">
+    <button>Click Here</button>
+
+    <script>
+        let listItem = document.getElementById("list");
+        console.log(listItem.attributes);
+
+        let button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', () => {
+            console.log('button clicked !!');
+        })
+
+        //or we can di this way
+
+       // function performOnclick() {
+      //      console.log('clicked');
+       // }
+        //button.addEventListener('click',performOnclick);
+    </script>
+</body>
+</html>

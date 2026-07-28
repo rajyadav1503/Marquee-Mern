@@ -10,19 +10,33 @@
     <h3></h3>
     <p class="c1 c2 c3"></p>
 
+   
+
     <script>
 
       let quotePara = document.getElementsByTagName('h3')[0];
       let creatorPara = document.getElementsByTagName('p')[0];
+
+      // 1st way to add style
       //quotePara.style.backgroundColor = 'red';
 
+      //2nd way to add style
       //creatorPara.style.cssText = 'color:yellow; background: green';
       //quotePara.style.cssText = 'background : beige;color:red ; text-size: 22px';
+      
       //console.log(this.getComputedStyle(creatorPara));
       //console.log(quotePara.className);
-      console.log(quotePara.className);
-      quotePara.classList.add('red');
-      console.log(quotePara.classList);
+
+      console.log(creatorPara.className);
+      creatorPara.classList.add('red');
+      console.log(creatorPara.classList);
+
+      creatorPara.classList.remove('c2');
+      console.log(creatorPara.classList);
+
+
+
+
 
     </script>
     

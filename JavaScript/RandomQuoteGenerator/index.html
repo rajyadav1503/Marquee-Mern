@@ -17,7 +17,7 @@
     <h1>Random Quote Generator</h1>
     <h3></h3>
     <p class="p1 p2 p3"></p>
-    <p></p>
+    
     <button>Generate Quote</button>
 
     <script>
@@ -128,18 +128,10 @@
         document.getElementsByTagName('p')[0].innerText=selectedQuote.createdBy;
         
       });
+      
       let quotePara = document.getElementsByTagName('h3')[0];
       let creatorPara = document.getElementsByTagName('p')[0];
-      //quotePara.style.backgroundColor = 'red';
-
-      creatorPara.style.cssText = 'color:yellow; background: green';
-      quotePara.style.cssText = 'background : beige;color:red ; text-size: 22px';
-      console.log(this.getComputedStyle(creatorPara));
-      console.log(quotePara.className);
-
-      quotePara.classList.add('red');
-      console.log(quotePara.classList);
-      //console.log(quotePara.classList);
+      
     </script>
   </body>
 </html>
