@@ -8,16 +8,25 @@
 </head>
 <body>
 
-    <canvas></canvas>
+    <div class="canvas-container">
+        <nav id="top-bar">
+            <button class="theme-btn">Dark Mode</button>
+            <button class="theme-btn">Light Mode</button>
+        </nav>
+        <h1><b>Drawing Pad</b></h1>
+        <canvas id="myCanvas"></canvas>
+        <div id="toolbar">
+        <input type="color" id="color-btn">
 
-    <div id="toolbar">
-        <input type="color">
-        <input type="range">
-        <button>Clear</button>
+        <div class="range-container">
+            <label for="size-slider" style="font-family: cursive;">SELECT SIZE</label>
+            <input type="range" id="size-slider" min="1" max="50" value="5">
+        </div>
+
+        <button id="clear-btn">CLEAR</button>
+    </div>
     </div>
     
-
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Paint</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        background: white;
+        font-family: Arial;
+      }
+
+      #toolbar {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      #clearBtn {
+        background-color: red;
+        color: white;
+      }
+
+      #drawingArea {
+        width: 90%;
+        height: 600px;
+        margin: auto;
+        background: rgb(196, 246, 196);
+        border: 2px solid black;
+
+        position: relative;
+
+        overflow: hidden;
+
+        cursor: pointer;
+      }
+
+      #theme-bar {
+        width: 100%;
+        padding: 15px;
+
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+        margin-bottom: 1rem;
+      }
+
+      #theme-bar button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      body.dark {
+        background: #1e1e1e;
+      }
+
+      body.dark #theme-bar {
+        background: #2d2d2d;
+      }
+
+      body.dark #toolbar {
+        color: white;
+      }
+
+      body.dark #drawingArea {
+        border: 2px solid white;
+      }
+
+      body.dark .clear-btn {
+        border: 2px solid white;
+      }
+
+      body.bw {
+        background: gray;
+      }
+
+      body.bw #theme-bar {
+        background: gray;
+      }
+
+      body.bw #toolbar {
+        color: black;
+      }
+
+      body.bw #myCanvas {
+        background: white;
+        border: 3px solid black;
+      }
+
+      body.bw * {
+        color: black;
+      }
+
+      body.bw button {
+        background: white;
+        color: black;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="theme-bar">
+      <button id="light-btn">Light</button>
+      <button id="dark-btn">Dark</button>
+      <button id="bw-btn">Black & White</button>
+    </div>
+
+    <div id="drawingArea"></div>
+
+    <div id="toolbar">
+      <input type="color" id="colorPicker" value="#000000" />
+
+      <input type="range" id="sizeSlider" min="2" max="30" value="8" />
+
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <script>
+      const drawingArea = document.getElementById("drawingArea");
+      const colorPicker = document.getElementById("colorPicker");
+      const sizeSlider = document.getElementById("sizeSlider");
+      const clearBtn = document.getElementById("clearBtn");
+
+      let isDrawing = false;
+
+      drawingArea.addEventListener("mousedown", () => {
+        isDrawing = true;
+      });
+
+      drawingArea.addEventListener("mouseup", () => {
+        isDrawing = false;
+      });
+
+      drawingArea.addEventListener("mouseleave", () => {
+        isDrawing = false;
+      });
+
+      drawingArea.addEventListener("mousemove", (e) => {
+        if (!isDrawing) return;
+
+        const dot = document.createElement("div");
+
+        dot.style.position = "absolute";
+
+        dot.style.width = sizeSlider.value + "px";
+        dot.style.height = sizeSlider.value + "px";
+
+        dot.style.borderRadius = "50%";
+
+        dot.style.backgroundColor = colorPicker.value;
+
+        dot.style.left = e.offsetX - sizeSlider.value / 2 + "px";
+        dot.style.top = e.offsetY - sizeSlider.value / 2 + "px";
+
+        drawingArea.appendChild(dot);
+      });
+
+      clearBtn.addEventListener("click", () => {
+        drawingArea.innerHTML = "";
+      });
+
+      colorPicker.addEventListener("input", () => {
+        const dots = drawingArea.querySelectorAll("div");
+
+        dots.forEach((dot) => {
+          dot.style.backgroundColor = colorPicker.value;
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowUp") {
+          if (Number(sizeSlider.value) < Number(sizeSlider.max)) {
+            sizeSlider.value = Number(sizeSlider.value) + 1;
+          }
+        }
+
+        if (e.key === "ArrowDown") {
+          if (Number(sizeSlider.value) > Number(sizeSlider.min)) {
+            sizeSlider.value = Number(sizeSlider.value) - 1;
+          }
+        }
+      });
+
+      const lightBtn = document.getElementById("light-btn");
+      const darkBtn = document.getElementById("dark-btn");
+      const bwBtn = document.getElementById("bw-btn");
+
+      lightBtn.addEventListener("click", () => {
+        document.body.classList.remove("dark");
+        document.body.classList.remove("bw");
+      });
+
+      darkBtn.addEventListener("click", () => {
+        document.body.classList.remove("bw");
+        document.body.classList.add("dark");
+      });
+
+      bwBtn.addEventListener("click", () => {
+        document.body.classList.remove("dark");
+        document.body.classList.add("bw");
+
+        // White drawing area
+        drawingArea.style.backgroundColor = "white";
+
+        // Change every drawn dot to black
+        const dots = drawingArea.querySelectorAll("div");
+
+        dots.forEach((dot) => {
+          dot.style.backgroundColor = "black";
+        });
+
+        colorPicker.value = "#000000";
+      });
+    </script>
+  </body>
+
+  <script></script>
+</html>

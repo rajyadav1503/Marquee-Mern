@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .items {
+        width: 200px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+      }
+      .items-1 {
+        background-color: salmon;
+      }
+
+      .items-2 {
+        background-color: rgb(12, 223, 139);
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+        gap: 2rem;
+        grid-auto-rows: 500px;
+      }
+      .containers {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .containers:nth-child(1) {
+        background-color: rgb(202, 207, 207);
+      }
+      .containers:nth-child(2) {
+        background-color: azure;
+      }
+      .dragging {
+        opacity: 0.5;
+        border: 2px solid red;
+      }
+      .items > img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="containers">
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwxfHxjYXJzfGVufDB8fHx8MTc4NTcyNzQyNnww&ixlib=rb-4.1.0&w=80&h=50&fit=max&q=80"
+            alt=""
+          />
+        </div>
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwyfHxjYXJzfGVufDB8fHx8MTc4NTcyNzQyNnww&ixlib=rb-4.1.0&w=80&h=50&fit=max&q=80"
+            alt=""
+          />
+        </div>
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwzfHxjYXJzfGVufDB8fHx8MTc4NTcyNzQyNnww&ixlib=rb-4.1.0&w=80&h=50&fit=max&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="containers">
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw4fHxkb2d8ZW58MHx8fHwxNzg1NzMwMTc2fDA&ixlib=rb-4.1.0&fit=max&q=80"
+            alt=""
+          />
+        </div>
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwyfHxkb2d8ZW58MHx8fHwxNzg1NzMwMTc2fDA&ixlib=rb-4.1.0&fit=max&q=80"
+            alt=""
+          />
+        </div>
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw2fHxkb2d8ZW58MHx8fHwxNzg1NzMwMTc2fDA&ixlib=rb-4.1.0&fit=max&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const items = document.querySelectorAll(".draggables");
+      const containers = document.querySelectorAll(".containers");
+
+      let draggedItem = null;
+
+      items.forEach((item) => {
+        item.addEventListener("dragstart", () => {
+          draggedItem = item;
+          item.classList.add("dragging"); // Add class
+        });
+
+        item.addEventListener("dragend", () => {
+          item.classList.remove("dragging"); // Remove class
+          draggedItem = null;
+        });
+      });
+
+      containers.forEach((container) => {
+        container.addEventListener("dragover", (e) => {
+          e.preventDefault();
+        });
+
+        container.addEventListener("drop", () => {
+          if (draggedItem) {
+            container.appendChild(draggedItem);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

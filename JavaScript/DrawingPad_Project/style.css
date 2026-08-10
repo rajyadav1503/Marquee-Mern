@@ -1,3 +1,58 @@
 body{
-    background-color: light rgb(167, 239, 167);
+    
+    background-color:rgb(167, 239, 167);
+    padding: 2rem;
+    margin: auto;
+}
+
+#clear-btn{
+    background-color: red;
+    color: yellow;
+    border: solid black 2px;
+    height: 30px;
+    width: 70px;
+    font-size: 17px;
+    font-family: cursive;
+
+}
+
+.canvas-container{
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+    box-sizing:border-box;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    /* margin: auto; */
+
+}
+.canvas-container>h1{
+    text-align: center;
+    color: blueviolet;
+    font-family:cursive
+}
+
+#myCanvas{
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border:solid red;
+}
+
+#toolbar{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+
+}
+
+.range-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.range-container>label{
+    margin-right: 8px;
 }
