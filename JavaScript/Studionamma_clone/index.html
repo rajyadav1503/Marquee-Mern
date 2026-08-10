@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studionamma</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://c.webfontfree.com/c.js?f=GTPressuraMono"
+      type="text/javascript"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -22,23 +30,37 @@
     </header>
 
     <main>
-        <div id="video">
-      <video
-        src="https://studionamma.vercel.app/videos/16-9_light-hd.mp4"
-        autoplay
-        muted
-        loop
-      ></video>
-    </div>
+      <!-- <div id="background-video">
+        <video
+          src="https://studionamma.vercel.app/videos/16-9_light-hd.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div> -->
+      <section class="hero">
+        <div id="hero-background-text">
+          <h1 class="backgroundText">
+            WE THINK <br />
+            CRAFT AND <br />
+            DESIGN
+          </h1>
+        </div>
+
+        <div id="floating-video">
+          <video autoplay muted loop playsinline>
+            <source
+              src="https://studionamma.vercel.app/videos/16-9_light-hd.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-about">
-            WE CREATE BOLD DESIGN & CLEAN WEBFLOW
-        </div>
-        <div class="footer-time">
-            BARCELONA , SPAIN
-        </div>
+      <div class="footer-about">WE CREATE BOLD DESIGN & CLEAN WEBFLOW</div>
+      <div class="footer-time">BARCELONA , SPAIN</div>
     </footer>
 
     <script src="script.js"></script>
