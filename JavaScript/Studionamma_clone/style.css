@@ -2,7 +2,8 @@
   font-family: "GT Pressura Mono";
   src: url("GT Pressura Mono Light Web.ttf") format("truetype");
 }
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,11 +36,13 @@ body {
   display: flex;
   align-items: center;
   gap: 90px;
+  z-index: 1000;
 }
 .nav-right {
   display: flex;
   align-items: center;
   gap: 90px;
+  z-index: 1000;
 }
 
 .footer {
@@ -71,10 +74,10 @@ main {
   justify-content: center;
   align-items: center;
 }
-#video video {
+/* #background-video video {
   width: 100%;
   height: auto;
-}
+} */
 .hero{
     position: relative;
     width: 100%;
@@ -82,22 +85,32 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-.hero>h1{
-    font-family: Bebas Neue ;
-    
+#hero-background-text{
+   position: relative;
+   z-index: 1;
 }
+#hero-background-text h1{
+    font-family:"Bebas Neue";
+    font-size:16vw;
+    line-height:.8;
+    text-align:center;
+    position: relative;
+}
+
 #floating-video {
-  z-index: 12;
+  
+  z-index: 99999;
   width: 250px;
   height: 350px;
   overflow: hidden;
   border-radius: 10px 10px;
   /* Position based on the cursor */
   position: absolute;
-  transition: all linear 0.25;
-  opacity: 1;
+  transition: all 0.25s linear;
+  opacity: 0;
+  /* top:50%;
+  left:60%; */
   
   /*
 TODO:
@@ -109,4 +122,51 @@ left: 10px; */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
+}
+
+body.dark{
+    background-color:#111;
+    color:white;
+}
+body.dark .navbar{
+    color:white;
+}
+
+body.dark .footer{
+    color:white;
+}
+
+.overlay-menu{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: top .7s ease;
+    z-index: 999;
+    font-weight: 900;
+}
+.overlay-menu h1{
+  font-weight: 1000;
+  font-family: "Bebas Neue";
+  font-size: 100px;
+  line-height: 110px;
+}
+
+.left-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 4rem;
+}
+.right-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 10rem;
 }
